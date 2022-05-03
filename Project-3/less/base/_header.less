@@ -1,0 +1,169 @@
+.slide {
+    position: relative;
+    overflow: hidden;
+    &-item {
+        
+        img {
+            width: 100%;
+           
+        }
+    }
+    &-control {
+        .flex();
+        position: absolute;
+        top:0;
+        margin-top: 28px;
+       
+        .logo {
+            img {
+                
+            }
+        }
+        .slide-content {  
+            padding-right: 11px;         
+            display: flex;
+            .content-item {
+                color: #eae4dc;
+                font-size: 23px;
+            }
+            .cart {
+                margin-right: 50px;
+                position: relative;   
+                &::after {
+                    content: attr(data);
+                    font-size: 13px;
+                    position: absolute;
+                    text-align: center;
+                    color: black;
+                    background-color: white;
+                    display: block;//vì ::after làther inline ko dùng  đc width
+                    width: 18px;
+                    height: 18px;
+                    line-height: 18px;
+                    border-radius: 18px;
+                    top: -6px;
+                    right: -11px;
+                    
+                }           
+            }
+            
+            
+
+        }
+    }
+    &-inner {
+        position: absolute;
+        top: 34%;
+        left: 46.4%;
+        transform: translate(-50%, 0);
+        display: flex;
+        justify-content: space-between;
+        max-width: 1460px;
+        // max-width: 1460px;
+        // // margin-left: auto;
+        // padding-left: 15px;
+        .slide-mid-inner {
+            
+        }
+    }
+    &-title {
+        position: absolute;
+        top: 32.5%;
+        left: 96.2%;
+        transform: translate( -50%,50%);
+        // width: 400px;
+        ul {
+            display: block;
+          
+            .nav-item {
+                a {
+                    font-family: 'Cormorant Garamond';
+                    font-weight: 500;
+                    font-size: 24px;
+                    font-style: normal;
+                    color: #ddd;
+                    text-align: justify;
+                    letter-spacing: 2px;
+                    height: 43px;
+                    line-height: 43px;
+                    // display: block;
+                    justify-content: flex-end;
+                    display: flex;
+                    text-align: left;
+                    align-items: center;
+                    
+                    // position: relative;
+                    &::after {
+                        content: '';
+                        border-bottom: 2px solid #535353;
+                        width: 150px;
+                        height: 1px;
+                        margin-left: 20px;
+                        // margin-right: calc(-150px - 20px);
+                        .transformer (translateX(100%));
+                        
+                    }
+                    &:hover:after {
+                        .transformer (translateX(0%));
+                        
+                        color: white;
+                        
+                    }
+                    &:hover {
+                            
+                            text-decoration: none;
+                            color: white;
+                       
+                    }
+                }
+            }
+        }
+        
+    }
+    &-mid {
+        position: absolute;
+        top: 34%;
+        left: 46.4%;
+        transform: translate(-50%, 0);
+        &-inner {
+           
+            .slide-item {
+                font-family: 'Fira Sans';
+                font-size: 24px;
+                font-weight: 400;
+                font-style: normal;
+                color: #85817d;
+                letter-spacing: 0.5em;
+                margin-bottom: 35px;
+            }
+            .slide-summary {
+                font-family: 'Cormorant Garamond';
+                font-weight: 600;
+                font-size: 100px;
+                font-style: italic;
+                line-height: 100px; 
+                color: #333333;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                margin-bottom: 57px;
+            }
+            .slide-box {
+                font-family: 'Fira_Sans';
+                font-size: 16px;
+                font-weight: 700;
+                font-style: normal;
+                width: 197px;
+                height: 47px;
+                line-height: 47px;
+                text-align: center;
+                background-color: #333333;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                a {
+                    color: #ffffff;
+                    display: block;
+                }
+            }
+        }
+    }
+}
